@@ -27,7 +27,7 @@ abstract class UsrController extends \yii\web\Controller
                     ? Yii::t('usr', 'Password recovery')
                     : Yii::t('usr', 'Email address verification');
                 $params['actionUrl'] = \yii\helpers\Url::toRoute([
-                    $this->module->id . '/default/' . $mode,
+                    $mode,
                     'activationKey' => $model->getIdentity()->getActivationKey(),
                     'username'      => $model->getIdentity()->username,
                 ], true);
