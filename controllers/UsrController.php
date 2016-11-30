@@ -24,13 +24,14 @@ abstract class UsrController extends \yii\web\Controller
             case 'recovery':
             case 'verify':
                 $subject = $mode == 'recovery'
-                    ? Yii::t('usr', 'Password recovery')
+                    ? Yii::t('usr', 'Finish resetting your Pitcher Admin password')
                     : Yii::t('usr', 'Email address verification');
                 $params['actionUrl'] = \yii\helpers\Url::toRoute([
                     $mode,
                     'activationKey' => $model->getIdentity()->getActivationKey(),
                     'username'      => $model->getIdentity()->username,
                 ], true);
+                $params['username'] = $model->getIdentity()->username;
                 break;
             case 'oneTimePassword':
                 $subject        = Yii::t('usr', 'One Time Password');
