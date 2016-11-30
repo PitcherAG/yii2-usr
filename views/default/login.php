@@ -24,8 +24,6 @@ $this->params['breadcrumbs'][] = $this->title;
     'validateOnSubmit' => true,
 ]); ?>
 
-    <p class="note"><?= Yii::t('usr', 'Fields marked with <span class="required">*</span> are required.') ?></p>
-
     <?= $form->errorSummary($model) ?>
 
     <div class="row">
