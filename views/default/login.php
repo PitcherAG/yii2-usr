@@ -28,8 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-lg-5">
-            <?= $form->field($model, 'username', ['inputOptions' => ['autofocus' => true, 'class' => 'form-control']]) ?>
-            <?= $form->field($model, 'password')->passwordInput() ?>
+            <?= $form->field($model, 'username', ['inputOptions' => ['autofocus' => true, 'class' => 'form-control input-lg']]) ?>
+            <?= $form->field($model, 'password', ['inputOptions' => ['class' => 'input-lg']])->passwordInput() ?>
 <?php if ($this->context->module->rememberMeDuration > 0): ?>
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 <?php endif; ?>
