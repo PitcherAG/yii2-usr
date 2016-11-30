@@ -1,5 +1,5 @@
 {
-	"name": "nineinchnick/yii2-usr",
+	"name": "pitcher/yii2-usr",
 	"description": "Yii 2.0 framework module for user authentication, password reset, registration and profile updating.",
 	"license": "MIT",
 	"type": "yii2-module",
