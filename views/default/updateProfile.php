@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php endif; ?>
 
             <div class="form-group">
-                <?= Html::submitButton(Yii::t('usr', 'Submit'), ['class' => 'btn btn-primary']) ?>
+                <?= Html::submitButton(Yii::t('usr', 'Submit'), ['class' => 'btn btn-primary btn-lg']) ?>
             </div>
         </div>
     </div>

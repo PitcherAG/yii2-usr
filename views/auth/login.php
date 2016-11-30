@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($remoteLogin, 'openid_identifier') ?>
 
             <div class="form-group">
-                <?= Html::submitButton(Yii::t('usr', 'Log in'), ['class' => 'btn btn-primary']) ?>
+                <?= Html::submitButton(Yii::t('usr', 'Log in'), ['class' => 'btn btn-primary btn-lg']) ?>
             </div>
         </div>
     </div>
