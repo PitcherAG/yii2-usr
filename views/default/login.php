@@ -10,7 +10,6 @@ use yii\widgets\ActiveForm;
  * @var ActiveForm $form
  */
 $this->title = Yii::t('usr', 'Log in');
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <h1><?= Html::encode($this->title) ?></h1>
@@ -29,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-lg-5">
             <?= $form->field($model, 'username', ['inputOptions' => ['autofocus' => true, 'class' => 'form-control input-lg']]) ?>
-            <?= $form->field($model, 'password', ['inputOptions' => ['class' => 'input-lg']])->passwordInput() ?>
+            <?= $form->field($model, 'password', ['inputOptions' => ['class' => 'form-control input-lg']])->passwordInput() ?>
 <?php if ($this->context->module->rememberMeDuration > 0): ?>
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 <?php endif; ?>

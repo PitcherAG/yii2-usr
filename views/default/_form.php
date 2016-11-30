@@ -12,17 +12,17 @@ use yii\widgets\ActiveForm;
  */
 ?>
 
-            <?= $form->field($model, 'username', ['inputOptions' => ['autofocus' => true, 'class' => 'form-control']]) ?>
-            <?= $form->field($model, 'email') ?>
+            <?= $form->field($model, 'username', ['inputOptions' => ['autofocus' => true, 'class' => 'form-control input-lg']]) ?>
+            <?= $form->field($model, 'email', ['inputOptions' => array_merge(['class' => 'form-control input-lg'])]) ?>
 
 <?php if ($model->scenario !== 'register'): ?>
-            <?= $form->field($model, 'password')->passwordInput() ?>
+            <?= $form->field($model, 'password', ['inputOptions' => array_merge(['class' => 'form-control input-lg'])])->passwordInput() ?>
 <?php endif; ?>
 
 <?= $this->render('_newpassword', ['form' => $form, 'model' => $passwordForm, 'focus' => false]) ?>
 
-            <?= $form->field($model, 'firstName') ?>
-            <?= $form->field($model, 'lastName') ?>
+            <?= $form->field($model, 'firstName', ['inputOptions' => array_merge(['class' => 'form-control input-lg'])]) ?>
+            <?= $form->field($model, 'lastName', ['inputOptions' => array_merge(['class' => 'form-control input-lg'])]) ?>
 <?php if ($model->getIdentity() instanceof \nineinchnick\usr\components\PictureIdentityInterface && !empty($model->pictureUploadRules)):
         $picture = $model->getIdentity()->getPictureUrl(80, 80);
         if ($picture !== false) {
